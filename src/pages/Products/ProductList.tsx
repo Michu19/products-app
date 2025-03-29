@@ -97,7 +97,7 @@ const ProductsList = () => {
               <img
                 src={product.thumbnail}
                 alt={product.title}
-                className="w-full h-40 object-cover rounded-lg"
+                className="w-full h-40 object-contain rounded-lg"
               />
               <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
               <p className="text-gray-600">${product.price}</p>
