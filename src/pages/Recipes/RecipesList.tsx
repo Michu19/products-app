@@ -22,7 +22,6 @@ const RecipesList = () => {
     order: sortOption.split('-')[1] as 'asc' | 'desc',
     sortBy: sortOption.split('-')[0],
   });
-  console.log(recipes);
   const { data: recipesByTag, isLoading: isRecipesLoading } =
     useGetRecipesByTagQuery(
       {
