@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Loader } from "../../components/Loader";
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Loader } from '../../components/Loader';
 
 interface Product {
   id: number;
@@ -55,7 +55,7 @@ const ProductDetail = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching product:", error);
+        console.error('Error fetching product:', error);
         setLoading(false);
       });
   }, [params.id]);
@@ -69,8 +69,11 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="h-full p-4 flex flex-col mx-auto max-w-4xl">
-      <Link to="/products" className="bg-blue-500 w-24 text-white px-6 py-3 rounded-lg hover:bg-blue-600 mb-4">
+    <div className="max-w-4xl h-full p-4 flex flex-col">
+      <Link
+        to="/products"
+        className="bg-blue-500 w-24 text-white px-6 py-3 rounded-lg hover:bg-blue-600 mb-4"
+      >
         Powrót
       </Link>
       <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
@@ -79,20 +82,34 @@ const ProductDetail = () => {
         alt={product.title}
         className="w-full h-64 object-cover rounded-lg mb-4"
       />
-      <p className="text-lg mb-2"><strong>Kategoria:</strong> {product.category}</p>
-      <p className="text-lg mb-2"><strong>Marka:</strong> {product.brand}</p>
-      <p className="text-lg mb-2"><strong>Cena:</strong> ${product.price}</p>
-      <p className="text-lg mb-2"><strong>Rabat:</strong> {product.discountPercentage}%</p>
-      <p className="text-lg mb-2"><strong>Ocena:</strong> {product.rating} / 5</p>
-      <p className="text-lg mb-2"><strong>Stan magazynowy:</strong> {product.stock} sztuk</p>
-      <p className="text-lg mb-2"><strong>Dostępność:</strong> {product.availabilityStatus}</p>
+      <p className="text-lg mb-2">
+        <strong>Kategoria:</strong> {product.category}
+      </p>
+      <p className="text-lg mb-2">
+        <strong>Marka:</strong> {product.brand}
+      </p>
+      <p className="text-lg mb-2">
+        <strong>Cena:</strong> ${product.price}
+      </p>
+      <p className="text-lg mb-2">
+        <strong>Rabat:</strong> {product.discountPercentage}%
+      </p>
+      <p className="text-lg mb-2">
+        <strong>Ocena:</strong> {product.rating} / 5
+      </p>
+      <p className="text-lg mb-2">
+        <strong>Stan magazynowy:</strong> {product.stock} sztuk
+      </p>
+      <p className="text-lg mb-2">
+        <strong>Dostępność:</strong> {product.availabilityStatus}
+      </p>
       <div>
         <strong>Opis:</strong>
         <p>{product.description}</p>
       </div>
       <div className="mt-4">
         <strong>Tagi:</strong>
-        <p>{product.tags.join(", ")}</p>
+        <p>{product.tags.join(', ')}</p>
       </div>
       <div className="mt-4">
         <strong>Informacje o gwarancji:</strong>
@@ -107,7 +124,8 @@ const ProductDetail = () => {
         <ul className="list-disc pl-6">
           {product.reviews.map((review, index) => (
             <li key={index}>
-              <strong>{review.reviewerName}</strong> ({review.rating} gwiazdek): {review.comment}
+              <strong>{review.reviewerName}</strong> ({review.rating} gwiazdek):{' '}
+              {review.comment}
             </li>
           ))}
         </ul>
