@@ -80,7 +80,7 @@ const ProductDetail = () => {
       <img
         src={product.thumbnail}
         alt={product.title}
-        className="w-full h-64 object-cover rounded-lg mb-4"
+        className="w-full h-64 object-contain rounded-lg mb-4"
       />
       <p className="text-lg mb-2">
         <strong>Kategoria:</strong> {product.category}

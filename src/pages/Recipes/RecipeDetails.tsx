@@ -41,7 +41,7 @@ const RecipeDetail = () => {
       <img
         src={recipe.image}
         alt={recipe.name}
-        className="w-full h-64 object-cover rounded-lg mb-4"
+        className="w-full h-64 object-contain rounded-lg mb-4"
       />
       <p className="text-lg mb-2">
         <strong>Kuchnia:</strong> {recipe.cuisine}
