@@ -29,7 +29,7 @@ const App = () => {
             Przepisy
           </Link>
         </nav>
-        <div className="p-4 w-[500px] mx-auto">
+        <div className="p-4 md:w-[500px] mx-auto">
           <GlobalSearch
             placeholder="Przeszukaj wszystkie zasoby..."
             suggestions={useMemo(

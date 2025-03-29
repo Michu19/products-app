@@ -29,7 +29,7 @@ const ProductsList = () => {
   return (
     <div className="mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Lista produktów</h1>
-      <div className="mb-4 flex flex-col sm:flex-row items-center gap-4">
+      <div className="mb-4 flex flex-col sm:flex-row md:items-center gap-4 flex-wrap">
         <ComboBox
           id="search"
           label="Wyszukaj"
