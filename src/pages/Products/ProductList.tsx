@@ -49,7 +49,7 @@ const ProductsList = () => {
           value={selectedCategory}
           onChange={(e) => handleCategoryChange(e.target.value)}
           options={[
-            { value: '', label: 'All Categories' },
+            { value: '', label: 'Wszystkie' },
             ...(categories || []).map((category) => ({
               value: category.slug,
               label: category.name,
