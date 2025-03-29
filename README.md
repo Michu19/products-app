@@ -14,11 +14,11 @@ The Products and Recipes App is a simple application designed to manage products
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/simple-products-app.git
+   git clone https://github.com/Michu19/products-app.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd simple-products-app
+   cd products-app
    ```
 3. Install dependencies:
    ```bash
@@ -29,11 +29,11 @@ The Products and Recipes App is a simple application designed to manage products
 
 1. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 2. Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:5173/products-app/
    ```
 3. Use the app to manage your products and recipes.
 
